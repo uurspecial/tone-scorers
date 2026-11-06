@@ -1,0 +1,9 @@
+# Match the verified experiment's model loading implementation.
+torch==2.10.0
+transformers==5.5.0
+peft==0.19.1
+accelerate==1.13.0
+bitsandbytes==0.49.2
+safetensors>=0.6,<1
+fastapi>=0.115,<1
+uvicorn>=0.30,<1

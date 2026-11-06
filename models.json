@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "release_tag": "v1.0.0",
+  "source_experiment": "06_workbook3_model_comparison",
+  "selection": "Full 496-train holdout model, seed 3407; identical selection for all four scorers",
+  "labels": [
+    "溫和",
+    "中性",
+    "不滿",
+    "酸"
+  ],
+  "max_length": 512,
+  "training_packages": {
+    "torch": "2.10.0",
+    "transformers": "5.5.0",
+    "peft": "0.19.1",
+    "accelerate": "1.13.0",
+    "bitsandbytes": "0.49.2",
+    "datasets": "4.3.0",
+    "scikit-learn": "1.8.0",
+    "numpy": "2.4.6",
+    "huggingface-hub": "1.15.0"
+  },
+  "models": [
+    {
+      "id": "roberta-base",
+      "source_key": "hfl_roberta_base",
+      "base_model": "hfl/chinese-roberta-wwm-ext",
+      "base_revision": "5c58d0b8ec1d9014354d691c538661bf00bfdb44",
+      "family": "encoder",
+      "load_in_4bit": false,
+      "seed": 3407,
+      "train_rows": 496,
+      "test_rows": 496,
+      "global_step": 372,
+      "experiment_config_hash": "9033072a460a8edbcb200bfb78822ea04b9b74bb4ad9f0eb450b3d3b9ead4b8a",
+      "source_weights_sha256": "1a473f7e299d91fdf4f35b94e560b7779f1fd05639d980dd094883926c717c0d",
+      "holdout_accuracy": 0.7560483870967742,
+      "holdout_macro_f1": 0.7479887749874226,
+      "precision": "BF16 + LoRA",
+      "base_license": "Apache-2.0",
+      "base_model_url": "https://huggingface.co/hfl/chinese-roberta-wwm-ext",
+      "files": {
+        "README.md": {
+          "bytes": 664,
+          "sha256": "310a1b0fe8720e6531f74fbce920eef8d8bfb40b5a5aceef2bd668d114c6ab3d"
+        },
+        "adapter_config.json": {
+          "bytes": 1182,
+          "sha256": "7299adc0f915acce7581e6e4d91a6802365c28386340ef55cd32aafba4843f93"
+        },
+        "adapter_model.safetensors": {
+          "bytes": 10643320,
+          "sha256": "1a473f7e299d91fdf4f35b94e560b7779f1fd05639d980dd094883926c717c0d"
+        },
+        "artifact.json": {
+          "bytes": 711,
+          "sha256": "b0c08ef7f574d97e3d4978599967310806dd892b3d07f4c5d226b627f5341087"
+        },
+        "tokenizer.json": {
+          "bytes": 439222,
+          "sha256": "93295ddede9ff05639600ddbb1d87a542bf0e72c9e1c8f0bf639e8142eaa0d50"
+        },
+        "tokenizer_config.json": {
+          "bytes": 350,
+          "sha256": "91edbef9aca430ab79f741eb292d9cb44966c8520e1bed218a2fa918934ca5c8"
+        }
+      },
+      "archive": "roberta-base.tar.gz",
+      "archive_bytes": 9965125,
+      "archive_sha256": "75d4a2ce61b8482207a27e078dfc392ecec3490911e4d76b2ce3921ae20602dd"
+    },
+    {
+      "id": "roberta-large",
+      "source_key": "hfl_roberta_large",
+      "base_model": "hfl/chinese-roberta-wwm-ext-large",
+      "base_revision": "a25cc9e05974bd9687e528edd516f2cfdb3f5db9",
+      "family": "encoder",
+      "load_in_4bit": false,
+      "seed": 3407,
+      "train_rows": 496,
+      "test_rows": 496,
+      "global_step": 372,
+      "experiment_config_hash": "9033072a460a8edbcb200bfb78822ea04b9b74bb4ad9f0eb450b3d3b9ead4b8a",
+      "source_weights_sha256": "35b49bf8871ddb929fda9af4048d1f316ca3bd7fb3161169bff74a4b20d181d4",
+      "holdout_accuracy": 0.8125,
+      "holdout_macro_f1": 0.8079040943203247,
+      "precision": "BF16 + LoRA",
+      "base_license": "Apache-2.0",
+      "base_model_url": "https://huggingface.co/hfl/chinese-roberta-wwm-ext-large",
+      "files": {
+        "README.md": {
+          "bytes": 677,
+          "sha256": "89d1ae746a183826c259c53ea8fe4ad7412c1cf1802b348ee4fdeedeb037b23a"
+        },
+        "adapter_config.json": {
+          "bytes": 1188,
+          "sha256": "7ebc1155b5b929eb5b17c5ca251e73e10637738b7447eebfd3b9a206486a1e88"
+        },
+        "adapter_model.safetensors": {
+          "bytes": 28360920,
+          "sha256": "35b49bf8871ddb929fda9af4048d1f316ca3bd7fb3161169bff74a4b20d181d4"
+        },
+        "artifact.json": {
+          "bytes": 713,
+          "sha256": "51d820aa7dd3cd55e3c6091746b0a67af241ee8d1f8327d173aa926ceadcd64f"
+        },
+        "tokenizer.json": {
+          "bytes": 439222,
+          "sha256": "93295ddede9ff05639600ddbb1d87a542bf0e72c9e1c8f0bf639e8142eaa0d50"
+        },
+        "tokenizer_config.json": {
+          "bytes": 350,
+          "sha256": "91edbef9aca430ab79f741eb292d9cb44966c8520e1bed218a2fa918934ca5c8"
+        }
+      },
+      "archive": "roberta-large.tar.gz",
+      "archive_bytes": 26351202,
+      "archive_sha256": "858fdac3fe1f9e310f7b66643fdedd48e61c886764d38a617bdeccb9261fa7f8"
+    },
+    {
+      "id": "llama-8b-lora",
+      "source_key": "meta_llama_8b_lora",
+      "base_model": "unsloth/Meta-Llama-3.1-8B",
+      "base_revision": "e9a141a2091ea561b96483212645a2a05e6f99fc",
+      "family": "llama",
+      "load_in_4bit": false,
+      "seed": 3407,
+      "train_rows": 496,
+      "test_rows": 496,
+      "global_step": 372,
+      "experiment_config_hash": "9033072a460a8edbcb200bfb78822ea04b9b74bb4ad9f0eb450b3d3b9ead4b8a",
+      "source_weights_sha256": "344f55d44eb1b978547b2d4e3dd1aa89e0266341f3ab2991c8f6e4fe653805b1",
+      "holdout_accuracy": 0.8850806451612904,
+      "holdout_macro_f1": 0.8852787782809912,
+      "precision": "BF16 + LoRA",
+      "base_license": "Llama 3.1 Community License",
+      "base_model_url": "https://huggingface.co/unsloth/Meta-Llama-3.1-8B",
+      "files": {
+        "README.md": {
+          "bytes": 678,
+          "sha256": "087d8b9b0d243b9dff3e75e1565013876c5d5c93a0c19efdcf3c056cb9b0efa1"
+        },
+        "adapter_config.json": {
+          "bytes": 1153,
+          "sha256": "08554400ee3c28ed372a9e0e6d025dbfdad681fe2adf235d6e22f18610cdcb0d"
+        },
+        "adapter_model.safetensors": {
+          "bytes": 167865112,
+          "sha256": "344f55d44eb1b978547b2d4e3dd1aa89e0266341f3ab2991c8f6e4fe653805b1"
+        },
+        "artifact.json": {
+          "bytes": 725,
+          "sha256": "f5af9f2ef8b27d74d970b41087911e1a63f5b80c2b8457332461528500eca9f0"
+        },
+        "tokenizer.json": {
+          "bytes": 17210018,
+          "sha256": "9c85066e7642934ed09b44155e6566b0b5dab2637fb9433439ba5c9c7f8b50d3"
+        },
+        "tokenizer_config.json": {
+          "bytes": 392,
+          "sha256": "637bb1c6835ca364f5e3a51b3fffb6b7b7f513f77a81e47829ad3b7a5d93b5ed"
+        }
+      },
+      "archive": "llama-8b-lora.tar.gz",
+      "archive_bytes": 157999493,
+      "archive_sha256": "a616a57b6d1bf651f9d9b9a9140e1bf5d50c429e1411c0b5842509e181d807b6"
+    },
+    {
+      "id": "llama-8b-4bit-lora",
+      "source_key": "meta_llama_8b_4bit_lora",
+      "base_model": "unsloth/Meta-Llama-3.1-8B",
+      "base_revision": "e9a141a2091ea561b96483212645a2a05e6f99fc",
+      "family": "llama",
+      "load_in_4bit": true,
+      "seed": 3407,
+      "train_rows": 496,
+      "test_rows": 496,
+      "global_step": 372,
+      "experiment_config_hash": "9033072a460a8edbcb200bfb78822ea04b9b74bb4ad9f0eb450b3d3b9ead4b8a",
+      "source_weights_sha256": "aba757d2082715f6731daed065810fe810299c7dc6e73bf0a6b7ace330961b84",
+      "holdout_accuracy": 0.8830645161290323,
+      "holdout_macro_f1": 0.8832687611291925,
+      "precision": "NF4 double quantization + BF16 compute + LoRA",
+      "base_license": "Llama 3.1 Community License",
+      "base_model_url": "https://huggingface.co/unsloth/Meta-Llama-3.1-8B",
+      "files": {
+        "README.md": {
+          "bytes": 683,
+          "sha256": "ae09e5b54c2e4acec19006ceffe4324f72af829f607bf36903b3dd38c0602a4c"
+        },
+        "adapter_config.json": {
+          "bytes": 1153,
+          "sha256": "7f6fca5f3c34ce8f2ad5fca57ce3ccde938eb3917a00b4dd6aca400c8957cc4f"
+        },
+        "adapter_model.safetensors": {
+          "bytes": 167865112,
+          "sha256": "aba757d2082715f6731daed065810fe810299c7dc6e73bf0a6b7ace330961b84"
+        },
+        "artifact.json": {
+          "bytes": 768,
+          "sha256": "b50a83469dba0b04237f1b21f216782bba59b2b100dd6a0adc0ecf54739f8fbf"
+        },
+        "tokenizer.json": {
+          "bytes": 17210018,
+          "sha256": "9c85066e7642934ed09b44155e6566b0b5dab2637fb9433439ba5c9c7f8b50d3"
+        },
+        "tokenizer_config.json": {
+          "bytes": 392,
+          "sha256": "637bb1c6835ca364f5e3a51b3fffb6b7b7f513f77a81e47829ad3b7a5d93b5ed"
+        }
+      },
+      "archive": "llama-8b-4bit-lora.tar.gz",
+      "archive_bytes": 157977666,
+      "archive_sha256": "8f46d55444d4fa87664734062a99626f4fc10c7d246681228477089b84edbf85"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "complete": true,
+  "manifest_sha256": "2e9b2076de64ff2891df69a0e08cfeac5ca5ce6deaf2c543a20e0537805a75dd",
+  "device": "NVIDIA GeForce RTX 5090",
+  "evaluated_rows_per_model": 496,
+  "models": [
+    {
+      "model": "roberta-base",
+      "matching_predictions": 496,
+      "evaluated_rows": 496,
+      "accuracy": 0.7560483870967742,
+      "max_absolute_logit_difference": 0.0,
+      "single_text_prediction_verified": true,
+      "weights_identical": true,
+      "runtime_seconds": 4.7
+    },
+    {
+      "model": "roberta-large",
+      "matching_predictions": 496,
+      "evaluated_rows": 496,
+      "accuracy": 0.8125,
+      "max_absolute_logit_difference": 0.0,
+      "single_text_prediction_verified": true,
+      "weights_identical": true,
+      "runtime_seconds": 8.81
+    },
+    {
+      "model": "llama-8b-lora",
+      "matching_predictions": 496,
+      "evaluated_rows": 496,
+      "accuracy": 0.8850806451612904,
+      "max_absolute_logit_difference": 0.0,
+      "single_text_prediction_verified": true,
+      "weights_identical": true,
+      "runtime_seconds": 40.75
+    },
+    {
+      "model": "llama-8b-4bit-lora",
+      "matching_predictions": 496,
+      "evaluated_rows": 496,
+      "accuracy": 0.8830645161290323,
+      "max_absolute_logit_difference": 0.0,
+      "single_text_prediction_verified": true,
+      "weights_identical": true,
+      "runtime_seconds": 19.34
+    }
+  ]
+}
